@@ -12,8 +12,13 @@ fetch('https://fakestoreapi.com/products?limit=10')
              let htmls = firstFiveProducts.map(function(goods) {
             return `<li>
                 <img src="${goods.image}" alt="${goods.title}">
-                <h2>${goods.title}</h2>
-                <div>${goods.body}</div>
+                <div>
+                    <h2>${goods.title}</h2>
+                    <div>${goods.body}</div>
+                    <br>
+                    <div style="color: red">${goods.price}</div>
+                </div>
+                
             </li>`;
         });
 
@@ -27,11 +32,16 @@ fetch('https://fakestoreapi.com/products?limit=10')
             let secondFiveProducts = products.slice(5, 10);
 
             let htmls2 = secondFiveProducts.map(function(goods) {
-                return `<li>
+                return  `<li>
+                <img src="${goods.image}" alt="${goods.title}">
+                <div>
                     <h2>${goods.title}</h2>
                     <div>${goods.body}</div>
-                    <img src="${goods.image}" alt="${goods.title}">
-                </li>`;
+                    <br>
+                    <div style="color: red">${goods.price}</div>
+                </div>
+                
+            </li>`;
             });
             let html2 = htmls2.join('');
             document.getElementById('container').innerHTML = html2;

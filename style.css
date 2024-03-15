@@ -1,13 +1,25 @@
 body
 {
     overflow:visible;
+    margin: 50px 300px;
 }
 li
 {
     list-style-type: none;
-    display: inline-flex;
-    flex-wrap: nowrap;
+    margin: 20px;
+    display: flex;
+    width: 700px;
     padding: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    div
+        {
+            margin-left: 20px;
+        }
+    img
+    {
+        margin-left: 30px;
+    }
     
 }
 #container
@@ -15,14 +27,13 @@ li
     img
     {
         width: 100px;
-        
-    }
-    li
-    {
-        padding: 10px;
-        border: 1px solid cornsilk;
-        margin: 30px;
     }
     
+}
+button
+{
+    padding: 20px;
+    border: 1px solid cadetblue;
+    border-radius: 10px;
 }
 

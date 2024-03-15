@@ -12,9 +12,17 @@ li
 }
 #container
 {
-    /* visibility:hidden; */
-}
-#buttonload
-{
+    img
+    {
+        width: 100px;
+        
+    }
+    li
+    {
+        padding: 10px;
+        border: 1px solid cornsilk;
+        margin: 30px;
+    }
     
 }
+

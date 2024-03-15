@@ -1,14 +1,15 @@
-var postApi = 'https://fakestoreapi.com/products?limit=10';
 
-fetch(postApi)
+
+fetch('https://fakestoreapi.com/products?limit=10')
     .then(function(response) {
         return response.json();
     })
     .then(function(products) {
-        console.log(products);
-        let firstFiveProducts = products.slice(0, 5);
+      
+        document.getElementById('buttonload').addEventListener("click", function() {
+            let firstFiveProducts = products.slice(0, 5);
 
-        let htmls = firstFiveProducts.map(function(goods) {
+             let htmls = firstFiveProducts.map(function(goods) {
             return `<li>
                 <h2>${goods.title}</h2>
                 <div>${goods.body}</div>
@@ -16,9 +17,10 @@ fetch(postApi)
             </li>`;
         });
 
-        let html = htmls.join('');
-        document.getElementById('container').innerHTML = html;
+            let html = htmls.join('');
+            document.getElementById('container').innerHTML = html;
 
+        });
    
         document.getElementById('button').addEventListener("click", function() {
             let secondFiveProducts = products.slice(5, 10);
